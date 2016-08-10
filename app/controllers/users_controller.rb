@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    @self.salt = ActiveSupport::SecureRandom.base64(8)
     @user.passwort = Digest::SHA1.hexdigest(self.salt + user.passwort)
 
     respond_to do |format|
