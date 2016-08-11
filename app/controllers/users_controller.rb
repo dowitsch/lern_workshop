@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :is_user_logged_in, only: [:show, :new, :index, :create]
   # GET /users
   # GET /users.json
   def index
