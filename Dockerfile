@@ -1,4 +1,4 @@
-FROM openshift/ruby-22-centos7
+FROM rails 
 
 USER root
 
