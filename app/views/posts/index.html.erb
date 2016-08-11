@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/posts.scss">
+    <title>Titel</title>
+  </head>
+  <body>
+    <button id="home_button" type="home_button">Home</button>
+    <button id="profile_button" type="profile_button">Profile</button>
+    <%= button_to "Logout", logout_path, :method => "post", id: 'logout_button' %>
+
+      <div class="line-separator"></div>
+
+    <div class="container">
+<div class="col-md-5">
+    <div class="form-area">
+        <form role="form">
+        <br style="clear:both">
+                    <h3 style="margin-bottom:">Write something</h3>
+    				<div class="form-group">
+                    <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="200" rows="7"></textarea>
+                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
+                    </div>
+
+        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Post</button>
+        </form>
+    </div>
+</div>
+</div>
+
+    <div class="line-separator"></div>
+
+    <div><b>Alice</b><br>
+      Hallo
+        ich war heute in der Schule.<br>
+        Cool. <br>
+        hallo <br><br>
+        grüezi
+    </div>
+
+    <div class="line-separator"><div>
+
+      <div><b>Root</b><br>
+        Hallo
+          ich war heute in der Schule.<br>
+          Cool. <br>
+          hallo <br><br>
+          grüezi
+      </div>
+
+      <div class="line-separator"><div>
+
+        <div><b>Bob</b><br>
+          Hallo
+            ich war heute in der Schule.<br>
+            Cool. <br>
+            hallo <br><br>
+            grüezi
+        </div>
+
+        <div class="line-separator"><div>
+
+  </body>
+</html>
