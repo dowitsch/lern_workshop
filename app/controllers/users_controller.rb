@@ -25,6 +25,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    encrypted_password = Digest::SHA1.hexdigest(@user.passwort)
+    @user.passwort = encrypted_password 
 
     respond_to do |format|
       if @user.save
